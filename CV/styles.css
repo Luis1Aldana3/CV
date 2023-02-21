@@ -1,3 +1,172 @@
-*{
-    font-family: 'Rubik', sans-serif;
+:root{
+    --negro: #292929;
+    --blanco: #DBDBDB;
+    --rojo: #DB2884;
+    --celeste: #28B4DB;
+}
+
+html{
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+body{
+    background-color: var(--blanco);
+    margin: 0px;
+}
+
+header{
+    height: 60px;
+    width: 100%;
+    background-color: var(--negro);
+    border-radius: 0px 0px 20px 20px;
+    justify-content: space-between;
+    display: flex;
+    position: fixed;
+    top: 0;
+}
+h1{
+    font-size: 40px;
+    color: var(--rojo);
+    margin: 5px 20px;
+}
+
+.botonNav{
+    font-size: 20px;
+    background-color: var(--celeste);
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border-style: none;
+    margin: 10px 20px;
+    cursor: pointer;
+}
+.navBar{
+    display: none;
+}
+.navBar_visible{
+    position: absolute;
+    position: fixed;
+    display: flex;
+    background-color: var(--rojo);
+    top: 70px;
+    width: 100%;
+    border-radius: 20px;
+    justify-content: center;
+    height: fit-content;
+}
+.navBar-menu{
+    list-style: none;
+    padding: 0;
+}
+.navBar-menu-item{
+    margin: 20px;
+    border-style: solid;
+}
+.menu-item-link{
+    color: var(--negro);
+    font-size: 30px;
+    text-decoration: none;
+}
+.menu-item-link:hover{
+    color: var(--celeste);
+}
+
+#fotoYNombre{
+    padding: 10% 0 20% 0;
+    margin-top: 90px;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 55vh;
+}
+#pfp{
+    border-radius: 50%;
+    border-style: solid;
+    border-color: var(--negro);
+}
+
+article{
+    width: 90%;
+    margin-left: 5%;
+}
+section{
+    padding: 4% 10%;
+    margin-bottom: 40px;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    background: linear-gradient(#DB2884, #28B4DB);
+    border-radius: 20px;
+}
+
+@media (min-width: 800px){
+    header{
+        height: 80px;
+        border-radius: 0px;
+        justify-content: space-between;
+    }
+    h1{
+        font-size: 50px;
+        color: var(--rojo);
+        margin: 8px 30px;
+    }
+
+    .botonNav{
+        display: none;
+    }
+    .navBar{
+        display: flex;
+        margin-right: 30px;
+    }
+    .navBar-menu{
+        display: flex;
+    }
+    .navBar-menu-item{
+        cursor: pointer;
+        margin: 0 5px;
+        padding: 8px;
+        background-color: var(--celeste);
+        border-style: none;
+    }
+    .menu-item-link{
+        color: var(--negro);
+        font-size: 20px;
+    }
+    .navBar-menu-item:hover{
+        background-color: var(--rojo);
+    }
+
+    #fotoYNombre{
+        z-index: -1;
+        position: fixed;
+        padding: 5%;
+        margin-top: -10px;
+        margin-right: 0;
+        margin-left: 0;
+        height: 100vh;
+        border-radius: 0;
+    }
+    #pfp{
+        border-radius: 50%;
+        border-style: solid;
+        border-color: var(--negro);
+    }
+    
+    article{
+        margin-left: 30%;
+        margin-right: 30%;
+        margin-top: 90px;
+        width: 50%;
+    }
+    section{
+        min-height: 80vh;
+        padding: 4% 10%;
+        margin-bottom: 40px;
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        background: linear-gradient(#DB2884, #28B4DB);
+        border-radius: 20px;
+    }
+    
 }

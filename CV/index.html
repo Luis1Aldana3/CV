@@ -7,67 +7,81 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c698ad72b9.js" crossorigin="anonymous"></script>
     <title>CV</title>
 </head>
 <body>
     <header>
-        <img src="" alt="Logo">
-        <h1>CV</h1>
-        <nav>
-            <a href="" class="nav-link">Descripción</a>
-            <a href="" class="nav-link">Formación</a>
-            <a href="" class="nav-link">Experiencia</a>
-            <a href="" class="nav-link">Habilidades</a>
-            <a href="" class="nav-link">Reconocimientos</a>
-            <a href="" class="nav-link">Contactos</a>
+        <h1 id="titulo">CV</h1>
+
+        <button class="botonNav">
+            <i class="fa-sharp fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="navBar">
+            <ul class="navBar-menu">
+                <li class="navBar-menu-item"><a class="menu-item-link" href="#descripcion">Descripción</a></li>
+                <li class="navBar-menu-item"><a class="menu-item-link" href="#formacion">Formación</a></li>
+                <li class="navBar-menu-item"><a class="menu-item-link" href="#experiencia">Experiencia</a></li>
+                <li class="navBar-menu-item"><a class="menu-item-link" href="#habilidades">Habilidades</a></li>
+                <li class="navBar-menu-item"><a class="menu-item-link" href="#contacto">Contacto</a></li>    
+            </ul>
         </nav>
     </header>
 
-    <section id="descripcion">
-        <img id="pfp" src="https://randomuser.me/api/portraits/men/36.jpg" alt="Foto de perfil">
-        <div id="nombreYPuesto">
-            <h2>Austin Fernandez</h2>
-            <h2>Desarrollador Web Front-end</h2>
-        </div>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad architecto neque nobis! Sint quisquam nulla quia ut quam perferendis, velit vitae incidunt repellendus maiores quos quasi minima laudantium, expedita ea.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo sunt vel odit dolor quae dignissimos ut maxime fugit ea, tempora quos. Nulla asperiores at soluta repellendus error aspernatur, voluptate pariatur.
-        </p>
+    <section id="fotoYNombre">
+        <img id="pfp" alt="Foto de perfil">
+        <div id="nombre">
+            <h2>Hola, soy </h2>
+            <h2 id="nomYApe"></h2>
+        </div>    
     </section>
 
-    <section id="formacion">
-        <h3>Estudié en:</h3>
-        <ul>
-            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat facilis mollitia vel explicabo doloremque itaque fugit reprehenderit odit delectus ut! Quia in natus alias obcaecati consequatur repellendus consequuntur, totam minima?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat illum dolores harum quis modi rerum repudiandae blanditiis aspernatur vero ut nostrum nulla accusantium non natus aperiam, tempora odio praesentium dignissimos.</li>
-        </ul>
-    </section>
+    <article>    
+        <section id="descripcion">
+            <p id="presentacion">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad architecto neque nobis! Sint quisquam nulla quia ut quam perferendis, velit vitae incidunt repellendus maiores quos quasi minima laudantium, expedita ea.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo sunt vel odit dolor quae dignissimos ut maxime fugit ea, tempora quos. Nulla asperiores at soluta repellendus error aspernatur, voluptate pariatur.
+            </p>
+        </section>
+    
+        <section id="formacion">
+            <h3>Estudié en:</h3>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat facilis mollitia vel explicabo doloremque itaque fugit reprehenderit odit delectus ut! Quia in natus alias obcaecati consequatur repellendus consequuntur, totam minima?</li>
+                <br>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat illum dolores harum quis modi rerum repudiandae blanditiis aspernatur vero ut nostrum nulla accusantium non natus aperiam, tempora odio praesentium dignissimos.</li>
+            </ul>
+        </section>
+    
+        <section id="experiencia">
+            <h3>Trabajé en:</h3>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ullam corporis atque rerum totam ipsa nostrum voluptas officiis, repudiandae ut quasi rem, ipsam hic doloremque officia unde vero! Accusantium, eligendi.</li>
+                <br>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error corrupti necessitatibus ipsa rem. Commodi tenetur repellendus accusantium, harum voluptas quas libero adipisci porro voluptates reprehenderit doloribus eos autem vel ad.</li>
+            </ul>
+        </section>
+    
+        <section id="habilidades">
+            <h3>Me especializo en:</h3>
+            <ul>
+                <li>Html</li>
+                <li>Css</li>
+                <li>Js</li>
+                <li>Inglés</li>
+            </ul>
+        </section>
+    
+        <section id="contacto">
+            <h3>Si estás interesado, mis datos de contacto son:</h3>
+            <i class="fa-sharp fa-solid fa-envelope"></i><h4 id="correo"></h4>
+            <i class="fa-sharp fa-solid fa-phone"></i><h4 id="telefono"></h4>
+            <i class="fa-sharp fa-solid fa-location-dot"></i><h4 id="direccion"></h4>
+        </section>    
+    </article>
 
-    <section id="experiencia">
-        <h3>Trabajé en:</h3>
-        <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ullam corporis atque rerum totam ipsa nostrum voluptas officiis, repudiandae ut quasi rem, ipsam hic doloremque officia unde vero! Accusantium, eligendi.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error corrupti necessitatibus ipsa rem. Commodi tenetur repellendus accusantium, harum voluptas quas libero adipisci porro voluptates reprehenderit doloribus eos autem vel ad.</li>
-        </ul>
-    </section>
-
-    <section id="habilidades">
-        <h3>Tengo conocimientos de:</h3>
-        <ul>
-            <li>Html</li>
-            <li>Css</li>
-            <li>Js</li>
-            <li>Inglés</li>
-        </ul>
-    </section>
-
-    <section id="contacto">
-        <h3>Si estás interesado, mis datos de contacto son:</h3>
-        <h4>austin.fernandez@example.com</h4>
-        <h4>(697) 552-2105</h4>
-        <h4>9449 Mcclellan Rd</h4>
-    </section>
+    <script src="script.js"></script>
 </body>
 </html>
