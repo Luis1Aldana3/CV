@@ -5,6 +5,10 @@
     --celeste: #28B4DB;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 html{
     font-family: 'Lato', sans-serif;
     scroll-behavior: smooth;
@@ -15,12 +19,18 @@ body{
     margin: 0px;
 }
 
+#navBarContainer{
+    display: flex;
+    width: 100%;
+    margin: 0px auto;
+    justify-content: space-between;
+    max-width: 1200px;
+}
 header{
     height: 60px;
     width: 100%;
     background-color: var(--negro);
     border-radius: 0px 0px 20px 20px;
-    justify-content: space-between;
     display: flex;
     position: fixed;
     top: 0;
@@ -77,12 +87,11 @@ h1{
     margin-top: 90px;
     margin-left: 5%;
     margin-right: 5%;
-    height: 55vh;
+    height: 80vh;
 }
 #pfp{
     border-radius: 50%;
-    border-style: solid;
-    border-color: var(--negro);
+    border: solid var(--negro);
 }
 
 article{
@@ -100,6 +109,10 @@ section{
 }
 
 @media (min-width: 800px){
+    body{
+        font-size: 20px;
+    }
+    
     header{
         height: 80px;
         border-radius: 0px;
@@ -127,6 +140,7 @@ section{
         padding: 8px;
         background-color: var(--celeste);
         border-style: none;
+        border-radius: 4px;
     }
     .menu-item-link{
         color: var(--negro);
@@ -137,36 +151,26 @@ section{
     }
 
     #fotoYNombre{
-        z-index: -1;
-        position: fixed;
-        padding: 5%;
-        margin-top: -10px;
-        margin-right: 0;
+        width: 25%;
+        float: left;
         margin-left: 0;
+        margin-top: 80px;
+        position: fixed;
+        padding: 3%;
         height: 100vh;
         border-radius: 0;
     }
-    #pfp{
-        border-radius: 50%;
-        border-style: solid;
-        border-color: var(--negro);
-    }
     
     article{
-        margin-left: 30%;
-        margin-right: 30%;
-        margin-top: 90px;
-        width: 50%;
+        width: 75%;
+        float: right;
+        margin-top: 110px;
     }
     section{
-        min-height: 80vh;
-        padding: 4% 10%;
-        margin-bottom: 40px;
-        display: grid;
-        justify-content: center;
-        justify-items: center;
-        background: linear-gradient(#DB2884, #28B4DB);
-        border-radius: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 3% 7%;
+        border-radius: 5px;
     }
     
 }
