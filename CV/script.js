@@ -12,13 +12,28 @@ const correo = document.getElementById('correo');
 const direccion = document.getElementById('direccion');
 const telefono = document.getElementById('telefono');
 
-const barraProgreso = [document.getElementsByClassName('barraProgreso')];
+const barraProgreso = document.getElementsByClassName('barraProgreso');
+
+function generadorPorcentaje(){
+        let porcentaje = Math.round(Math.random()*100);
+        return porcentaje + "%";
+}
+
+function generadorEdad(e){
+        if(e < 18){
+                edad = e + 18;
+        } else{
+                edad = e;
+        }
+        return edad + " años";
+}
 
 const requestURL = 'https://randomuser.me/api/?nat=us';
 const request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
+
 request.onload = function() {
         const informacion = request.response.results[0];
         //Información de la persona
@@ -30,31 +45,21 @@ request.onload = function() {
         favIcon.href = informacion.picture.thumbnail;
 
         //Presentación
-        if (informacion.gender === "male"){
-                des = "desarrollador";
-                gen = "o";
+        if (informacion.gender === "female"){
+                gen = "a ";
         } else{
-                des = "desarrolladora";
-                gen = "a"
+                gen = " ";
         }
 
-        if (informacion.registered.age <=16){
-                edad = informacion.registered.age * 2;
-        } else{
-                edad = informacion.registered.age;
-        }
-        
-        presentacion.innerHTML = "Soy " + des + " web front-end y tengo " + edad + " años."
+        presentacion.innerHTML = "Soy desarrollador" + gen + "web front-end y tengo " + generadorEdad(informacion.registered.age);
 }
 
-//Datos aleatorios para Habilidades
-for (let x = 0; x <= 3; x++){
-        barraProgreso.forEach(element => {
-        let porcentaje = Math.round(Math.random()*100);
-        element[x].style.width =  porcentaje + "%";
-        element[x].innerHTML += " " + porcentaje + "%";
-    }
-)};
+Array.from(barraProgreso).forEach(function(element) {
+        let porcentaje = generadorPorcentaje();
+        element.style.width = porcentaje;
+        element.innerHTML += porcentaje;
+        }
+);
 
 btnMenu.addEventListener('click', function(){
         menu.classList.toggle('navBar_visible');
